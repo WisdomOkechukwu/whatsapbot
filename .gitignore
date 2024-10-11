@@ -1,0 +1,8 @@
+/.vscode
+/.idea
+/.wwebjs_cache
+/node_modules
+/local_auth
+package-lock.json
+documentation_for_pm.md
+.env
