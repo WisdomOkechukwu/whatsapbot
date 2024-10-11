@@ -6,3 +6,4 @@
 package-lock.json
 documentation_for_pm.md
 .env
+.DS_Store

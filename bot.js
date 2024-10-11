@@ -7,7 +7,10 @@ const path = require('path');
 const client = new Client({
     authStrategy: new LocalAuth({
         dataPath: path.resolve(__dirname, 'local_auth')
-    })
+    }),
+    puppeteer: {
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    }
 });
 
 // Event to handle QR code generation
