@@ -1,9 +1,12 @@
 {
-  "name": "wwebjs-bot",
+  "name": "whatsapp-bot",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node .",
+    "start": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop whatsapp-bot",
+    "delete": "pm2 delete whatsapp-bot",
+    "restart": "pm2 restart whatsapp-bot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

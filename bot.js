@@ -25,6 +25,7 @@ client.on('ready', () => {
 async function sendMessage(number, message) {
     try {
         const contactId = await client.getNumberId(number);
+        // console.log(contactId);
         if (contactId) {
             await client.sendMessage(contactId._serialized, message);
             console.log(`Message sent to ${number}`);
