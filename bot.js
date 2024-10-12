@@ -1,5 +1,5 @@
 // bot.js
-const { Client, LocalAuth } = require('whatsapp-web.js');
+const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const path = require('path');
 
@@ -30,7 +30,10 @@ async function sendMessage(number, message) {
         const contactId = await client.getNumberId(number);
         // console.log(contactId);
         if (contactId) {
-            await client.sendMessage(contactId._serialized, message);
+            // await client.sendMessage(contactId._serialized, message);
+            const media = MessageMedia.fromFilePath('./image/example.png');
+            // await client.sendMessage(contactId._serialized, media);
+            await client.sendMessage(contactId._serialized, media, { caption: message });
             console.log(`Message sent to ${number}`);
         } else {
             console.log('Number not found on WhatsApp');

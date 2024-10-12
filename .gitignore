@@ -3,7 +3,10 @@
 /.wwebjs_cache
 /node_modules
 /local_auth
+/image
 package-lock.json
 documentation_for_pm.md
 .env
 .DS_Store
+out.log
+error.log
