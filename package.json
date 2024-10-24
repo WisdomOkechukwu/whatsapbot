@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ecosystem.config.js",
-    "stop": "pm2 stop whatsapp-bot",
-    "delete": "pm2 delete whatsapp-bot",
-    "restart": "pm2 restart whatsapp-bot",
+    "start": "pm2 start ecosystem.config.js && pm2 logs whatsapp-bot && pm2 save --force",
+    "stop": "pm2 stop whatsapp-bot && pm2 delete whatsapp-bot && pm2 save --force",
+    "delete": "pm2 delete whatsapp-bot && pm2 save --force",
+    "restart": "pm2 restart whatsapp-bot && pm2 save --force",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

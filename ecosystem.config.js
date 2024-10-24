@@ -17,7 +17,7 @@ module.exports = {
             name: 'whatsapp-bot',
             script: './server.js',
             instances: 1,
-            max_memory_restart: "300M",
+            max_memory_restart: "50M",
 
             // Logging
             out_file: "./out.log",
@@ -29,12 +29,12 @@ module.exports = {
             // Env Specific Config
             env_production: {
                 NODE_ENV: "production",
-                PORT: 3000,
+                PORT: 9857,
                 exec_mode: "cluster_mode",
             },
             env_development: {
                 NODE_ENV: "development",
-                PORT: 3000,
+                PORT: 9857,
                 watch: true,
                 watch_delay: 3000,
                 ignore_watch: [
